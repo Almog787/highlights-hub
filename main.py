@@ -1,59 +1,61 @@
-import os, json, requests
+import os
+import json
+import requests
 
 DATA_FOLDER = "data"
-# שימוש בגרסה יציבה יותר של הלוגואים
-LOGO_BASE_URL = "https://www.thesportsdb.com/images/media/team/badge/small/"
 
-def clean_name(name):
-    """מנקה שמות קבוצות כדי לשפר את החיפוש"""
-    return name.replace("FC", "").replace("CF", "").strip()
+def get_fallback_logo(team_name):
+    """יוצר לוגו חלופי מעוצב אם אין לוגו מה-API"""
+    bg_colors = ["0D6EFD", "DC3545", "198754", "6610F2", "FD7E14"]
+    import hashlib
+    # בחירת צבע קבוע לפי שם הקבוצה
+    color_idx = int(hashlib.mdigest(team_name.encode()).hexdigest(), 16) % len(bg_colors)
+    return f"https://ui-avatars.com/api/?name={team_name}&background={bg_colors[color_idx]}&color=fff&size=200&bold=true&font-size=0.33"
 
-def fetch_data():
-    if not os.path.exists(DATA_FOLDER): os.makedirs(DATA_FOLDER)
-    
-    print("Fetching highlights...")
+def fetch_and_organize_data():
+    if not os.path.exists(DATA_FOLDER):
+        os.makedirs(DATA_FOLDER)
+
+    print("Fetching global football highlights...")
     try:
-        sb_data = requests.get("https://www.scorebat.com/video-api/v3/").json().get('response', [])
-    except: sb_data = []
+        response = requests.get("https://www.scorebat.com/video-api/v3/").json()
+        raw_matches = response.get('response', [])
+    except Exception as e:
+        print(f"Error: {e}")
+        raw_matches = []
 
-    # ארגון נתונים לפי ליגה
-    leagues_data = {}
-    
-    for item in sb_data[:30]: # לוקחים יותר נתונים כדי שיהיה מה לחלק
-        comp = item.get("competition", "Other")
-        if comp not in leagues_data:
-            leagues_data[comp] = []
-        
+    organized_data = {}
+
+    for item in raw_matches[:40]: # לוקחים מספיק משחקים לחלוקה
+        comp = item.get("competition", "International")
         title = item.get("title", "")
         teams = title.split(' - ')
-        home = clean_name(teams[0]) if len(teams) > 0 else "Home"
-        away = clean_name(teams[1]) if len(teams) > 1 else "Away"
+        
+        home_n = teams[0] if len(teams) > 0 else "Home"
+        away_n = teams[1] if len(teams) > 1 else "Away"
 
-        # ניסיון חכם להשיג לוגו (שימוש ב-API חינמי ללא מפתח לחיפוש מהיר)
-        leagues_data[comp].append({
+        match_entry = {
             "title": title,
             "date": item.get("date"),
             "embed_code": item.get("videos", [{}])[0].get("embed"),
             "url": item.get("matchviewUrl"),
-            "home_team": home,
-            "away_team": away,
-            # נשתמש בשירות חלופי ללוגואים אם TSDB נכשל
-            "home_logo": f"https://ui-avatars.com/api/?name={home}&background=random&color=fff&size=128",
-            "away_logo": f"https://ui-avatars.com/api/?name={away}&background=random&color=fff&size=128"
-        })
+            "home_team": {
+                "name": home_n,
+                "logo": get_fallback_logo(home_n)
+            },
+            "away_team": {
+                "name": away_n,
+                "logo": get_fallback_logo(away_n)
+            }
+        }
 
-    with open(f"{DATA_FOLDER}/highlights_by_league.json", "w", encoding="utf-8") as f:
-        json.dump(leagues_data, f, ensure_ascii=False, indent=4)
+        if comp not in organized_data:
+            organized_data[comp] = []
+        organized_data[comp].append(match_entry)
 
-    # משיכת תוצאות חיות
-    try:
-        api_key = os.environ.get("LIVE_API_KEY")
-        if api_key:
-            r = requests.get("https://v3.football.api-sports.io/fixtures?live=all", headers={'x-apisports-key': api_key})
-            live = r.json().get('response', [])
-            with open(f"{DATA_FOLDER}/live_scores.json", "w", encoding="utf-8") as f:
-                json.dump(live, f, ensure_ascii=False)
-    except: pass
+    with open(f"{DATA_FOLDER}/highlights.json", "w", encoding="utf-8") as f:
+        json.dump(organized_data, f, ensure_ascii=False, indent=4)
+    print("Data organized by league and saved.")
 
 if __name__ == "__main__":
-    fetch_data()
+    fetch_and_organize_data()
