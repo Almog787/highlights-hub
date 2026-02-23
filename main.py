@@ -19,10 +19,9 @@ def fetch_news():
     try:
         r = requests.get("https://www.skysports.com/rss/12040", timeout=10)
         root = ET.fromstring(r.content)
-        for item in root.findall('./channel/item')[:10]: # 10 מבזקים אחרונים
+        for item in root.findall('./channel/item')[:10]:
             news_items.append(item.find('title').text)
-    except Exception as e:
-        print(f"News error: {e}")
+    except:
         news_items = ["Live football updates available 24/7", "Check back for transfer news"]
     return news_items
 
@@ -30,14 +29,17 @@ def fetch_data():
     if not os.path.exists(DATA_FOLDER):
         os.makedirs(DATA_FOLDER)
 
-    # משיכת תקצירים
     try:
         response = requests.get("https://www.scorebat.com/video-api/v3/").json()
         raw_matches = response.get('response', [])
     except:
         raw_matches = []
 
-    organized_data = {"highlights": {}, "news": fetch_news()}
+    # יצירת המבנה החדש שכולל את שתי הקטגוריות
+    organized_data = {
+        "highlights": {},
+        "news": fetch_news()
+    }
 
     for item in raw_matches[:40]:
         comp = item.get("competition", "International")
@@ -53,11 +55,13 @@ def fetch_data():
             "home_team": {"name": home_n, "logo": get_fallback_logo(home_n)},
             "away_team": {"name": away_n, "logo": get_fallback_logo(away_n)}
         }
-        if comp not in organized_data["highlights"]: organized_data["highlights"][comp] = []
+        if comp not in organized_data["highlights"]: 
+            organized_data["highlights"][comp] = []
         organized_data["highlights"][comp].append(match_entry)
 
     with open(f"{DATA_FOLDER}/highlights.json", "w", encoding="utf-8") as f:
         json.dump(organized_data, f, ensure_ascii=False, indent=4)
+    print("Data updated successfully.")
 
 if __name__ == "__main__":
     fetch_data()
