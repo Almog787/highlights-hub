@@ -1,20 +1,24 @@
 # 🌍 Global News Network (GNN)
 
+## 🔗 Live Site
+Check out the live news hub here: [https://almog787.github.io/highlights-hub/](https://almog787.github.io/highlights-hub/)
+
 ## 📊 Automated Site Status
-* **Last Updated:** Mon Feb 23 13:41:14 UTC 2026
+* **Last Deployment:** Mon Feb 23 13:43:09 UTC 2026
 * **Status:** Active 🟢
-* **Main Language:** English (EN)
+* **Platform:** GitHub Pages
 
 ## 🚀 Project Overview
-This is a real-time international news hub. It uses automated feeds to fetch global headlines without a backend.
+This is an automated international news hub optimized for Google Discover and Google News. It fetches live updates globally without requiring a manual backend.
 
-### 🛠 Tech Stack
-- **Framework:** Bootstrap 5
-- **Tracking:** Google Analytics (G-8NEMWLX7BF)
-- **SEO:** Google News Schema Integrated
+### 🛠 Features & SEO
+- **Real-time Feeds:** Automated news updates.
+- **Google Search Console Ready:** Integrated sitemap and schema.
+- **Analytics:** Google Tag Manager ID `G-8NEMWLX7BF`.
+- **AdSense:** Pre-configured for monetization.
 
-## 📈 Google Integration
-The site is optimized for Google News and Discover. Ensure `sitemap.xml` is updated in the Search Console.
+## 📈 Technical Setup
+The project is a static web application built with HTML, Bootstrap 5, and JavaScript. It uses GitHub Actions to maintain documentation and site health.
 
 ---
-*Generated automatically by GitHub Actions*
+*Generated automatically by GitHub Actions for almog787*
