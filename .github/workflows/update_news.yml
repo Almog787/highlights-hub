@@ -1,0 +1,26 @@
+name: Update Live Streams
+on:
+  schedule:
+    - cron: '0 */6 * * *' # רץ כל 6 שעות
+  workflow_dispatch: # מאפשר הרצה ידנית
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install yt-dlp
+      - name: Run Scraper
+        run: python scraper.py
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Stream-Bot'
+          git config --global user.email 'bot@gnn.com'
+          git add streams.json
+          git commit -m "Auto-update live streams" || exit 0
+          git push
