@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-3359114283161345">
     
-    <title>GNN Universe | 30+ Live Streams</title>
+    <title>GNN Universe | Live Stream Portal</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,11 +35,11 @@
             padding-bottom: 50px;
         }
 
-        /* Hero Header */
+        /* Header & Hero */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 1)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000');
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 1)), url('https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2000');
             background-size: cover;
-            padding: 60px 0;
+            padding: 80px 0 40px;
             text-align: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
@@ -47,7 +47,7 @@
         .category-title {
             font-size: 1.8rem;
             font-weight: 800;
-            margin: 40px 0 20px;
+            margin: 50px 0 25px;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -60,24 +60,26 @@
             background: rgba(255,255,255,0.1);
         }
 
-        /* Grid System */
+        /* Grid & Cards */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .video-card {
             background: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
         }
         .video-card:hover {
-            transform: translateY(-8px);
+            transform: scale(1.03);
             border-color: var(--accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            z-index: 10;
         }
 
         .video-container {
@@ -89,137 +91,155 @@
         .video-container iframe {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
+            border: 0;
         }
 
-        .video-info { padding: 12px; }
+        .video-info { padding: 15px; }
         .video-info h6 { 
             margin: 0; 
-            font-size: 0.95rem; 
-            white-space: nowrap; 
-            overflow: hidden; 
-            text-overflow: ellipsis; 
+            font-size: 0.9rem; 
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .live-tag {
             background: var(--accent);
             color: white;
-            font-size: 0.65rem;
-            padding: 2px 6px;
+            font-size: 0.6rem;
+            padding: 2px 8px;
             border-radius: 4px;
             font-weight: bold;
             margin-left: 8px;
-            animation: blink 1.5s infinite;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse-red 2s infinite;
         }
 
-        @keyframes blink { 50% { opacity: 0.5; } }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--main-dark); }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        /* Floating Nav */
+        .navbar {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
 
+        footer {
+            background: #020617;
+            color: var(--text-gray);
+            padding: 80px 0 40px;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
 
+<nav class="navbar sticky-top navbar-dark">
+    <div class="container d-flex justify-content-between">
+        <a class="navbar-brand fw-bold text-danger" href="#">GNN<span class="text-white">.UNIVERSE</span></a>
+        <div id="live-clock" class="text-white small opacity-75"></div>
+    </div>
+</nav>
+
 <header class="hero">
     <div class="container">
-        <h1 class="display-4 fw-bold">GNN <span class="text-danger">UNIVERSE</span></h1>
-        <p class="text-gray fs-5">30+ ערוצי שידור חי מסביב לשעון</p>
-        <div id="live-clock" class="badge bg-dark p-2 border border-secondary mt-3"></div>
+        <h1 class="display-3 fw-bold mb-3">צפו בשידור חי <span class="text-danger">24/7</span></h1>
+        <p class="text-gray lead">חדשות, סרטים ותכני ילדים - מתעדכן אוטומטית בכל שעה</p>
     </div>
 </header>
 
 <main class="container">
     
-    <section>
-        <h2 class="category-title"><i class="bi bi-broadcast text-danger"></i> חדשות מהעולם</h2>
-        <div class="video-grid" id="news-grid"></div>
+    <section id="news-section">
+        <h2 class="category-title"><i class="bi bi-broadcast text-danger"></i> חדשות חי מהעולם</h2>
+        <div class="video-grid" id="news-grid">
+            <div class="text-center w-100 py-5 opacity-50">טוען שידורי חדשות...</div>
+        </div>
     </section>
 
-    <section>
-        <h2 class="category-title"><i class="bi bi-controller text-warning"></i> מצויירים לילדים (24/7)</h2>
-        <div class="video-grid" id="cartoons-grid"></div>
+    <section id="cartoons-section">
+        <h2 class="category-title"><i class="bi bi-controller text-warning"></i> ערוצי ילדים ומצויירים</h2>
+        <div class="video-grid" id="cartoons-grid">
+            <div class="text-center w-100 py-5 opacity-50">טוען ערוצי ילדים...</div>
+        </div>
     </section>
 
-    <section>
+    <section id="movies-section">
         <h2 class="category-title"><i class="bi bi-film text-info"></i> סרטים ובידור</h2>
-        <div class="video-grid" id="movies-grid"></div>
+        <div class="video-grid" id="movies-grid">
+            <div class="text-center w-100 py-5 opacity-50">טוען שידורי בידור...</div>
+        </div>
     </section>
 
 </main>
 
-<footer class="text-center py-5 border-top border-secondary mt-5">
-    <p class="mb-1">GNN Universe © 2026 | Developed by <a href="https://github.com/almog787" class="text-danger text-decoration-none fw-bold">Almog787</a></p>
-    <p class="small text-gray">כל התכנים מוטמעים ישירות מ-YouTube באופן חוקי.</p>
+<footer>
+    <div class="container text-center">
+        <h3 class="text-white mb-4">GNN Universe</h3>
+        <p>מערכת הזרמת תוכן אוטומטית מבוססת בינה מלאכותית.</p>
+        <hr class="border-secondary opacity-25 my-5">
+        <p class="mb-1">© 2026 GNN International | Developed by <a href="https://github.com/almog787" class="text-danger fw-bold text-decoration-none">Almog787</a></p>
+    </div>
 </footer>
 
 <script>
-    // רשימת ה-IDs של הסרטונים (ניתן להחליף את ה-ID בלבד כדי לעדכן סרטון)
-    const STREAMS = {
-        news: [
-            { id: "kQXggaqbAUQ", title: "ABC News Live" },
-            { id: "rEKifG2XUZg", title: "Sky News Live" },
-            { id: "oy_c-9M0EaE", title: "Fox News Live Updates" },
-            { id: "S6U-tEa5VfM", title: "Al Jazeera English" },
-            { id: "V0I5egl027w", title: "DW News Live" },
-            { id: "6f_fW0N0lqU", title: "France 24 English" },
-            { id: "UkflsYbpwII", title: "NBC News Now" },
-            { id: "gCNeDWCI0vo", title: "EuroNews Live" },
-            { id: "fE70L-80p0o", title: "Global News Canada" },
-            { id: "XWq5kBlakjo", title: "CNA 24/7 Asia" }
-        ],
-        cartoons: [
-            { id: "zcnkA83gBp0", title: "Curious George" },
-            { id: "ZI_onAbHTWw", title: "Peppa Pig Live" },
-            { id: "IcY5Y5_s12A", title: "Zig & Sharko" },
-            { id: "5-6_PVhnZ0g", title: "SpongeBob SquarePants" },
-            { id: "kP4Am3D8qEE", title: "Where's Chicky?" },
-            { id: "pS6mK_m99o0", title: "Bebefinn Nursery Rhymes" },
-            { id: "v_E49G45x_s", title: "Masha and the Bear" },
-            { id: "XqZsoesa55w", title: "Baby Shark Live" },
-            { id: "7v9YFvY3lFk", title: "Tom & Jerry Highlights" },
-            { id: "8JCBUavUQvI", title: "Disney Junior Mix" }
-        ],
-        movies: [
-            { id: "Bcxf0K3QkyA", title: "Movie Trailers 2026" },
-            { id: "laQsUwCu9KE", title: "Hollywood Cinema TV" },
-            { id: "uTxTRhfVNgk", title: "Sci-Fi Movies Channel" },
-            { id: "h7Z_mhagK5o", title: "Action Movie Central" },
-            { id: "7SEz6UkSTqE", title: "Family Movies Live" },
-            { id: "4-V0I5egl027w", title: "Documentary World" },
-            { id: "L_u99vK_m99", title: "Classic Cinema" },
-            { id: "K9u_tEa5VfM", title: "Horror Stream 24/7" },
-            { id: "Z9u_fE70L-80", title: "Adventure TV" },
-            { id: "M9u_XWq5kBla", title: "Comedy Network" }
-        ]
+    // הגדרת שידורי גיבוי (Fallback) במקרה שקובץ ה-JSON לא נמצא או ריק
+    const FALLBACK_DATA = {
+        news: [{id: "kQXggaqbAUQ", title: "ABC News Live"}, {id: "rEKifG2XUZg", title: "Sky News Live"}],
+        cartoons: [{id: "zcnkA83gBp0", title: "Curious George"}, {id: "ZI_onAbHTWw", title: "Peppa Pig"}],
+        movies: [{id: "Bcxf0K3QkyA", title: "Movie Trailers"}, {id: "laQsUwCu9KE", title: "Hollywood TV"}]
     };
 
-    function renderStreams() {
-        for (const [category, list] of Object.entries(STREAMS)) {
-            const grid = document.getElementById(`${category}-grid`);
-            list.forEach(stream => {
-                grid.innerHTML += `
-                    <div class="video-card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/${stream.id}?rel=0" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-info">
-                            <h6><span class="live-tag">LIVE</span> ${stream.title}</h6>
-                        </div>
-                    </div>
-                `;
-            });
+    async function loadStreams() {
+        let data;
+        try {
+            // ניסיון לטעון את הקובץ שהבוט מייצר
+            const response = await fetch('streams.json');
+            if (!response.ok) throw new Error('File not found');
+            data = await response.json();
+        } catch (e) {
+            console.log("Using fallback data...");
+            data = FALLBACK_DATA;
         }
+
+        renderGrid('news', data.news || FALLBACK_DATA.news);
+        renderGrid('cartoons', data.cartoons || FALLBACK_DATA.cartoons);
+        renderGrid('movies', data.movies || FALLBACK_DATA.movies);
+    }
+
+    function renderGrid(type, list) {
+        const grid = document.getElementById(`${type}-grid`);
+        grid.innerHTML = '';
+        
+        list.slice(0, 10).forEach(item => {
+            const videoId = item.id || item.url.split('embed/')[1];
+            grid.innerHTML += `
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/${videoId}?rel=0&autoplay=0&mute=1" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h6><span class="live-tag">LIVE</span> ${item.title}</h6>
+                    </div>
+                </div>
+            `;
+        });
     }
 
     function updateClock() {
         const now = new Date();
-        document.getElementById('live-clock').innerText = now.toLocaleTimeString('he-IL') + " | " + now.toLocaleDateString('he-IL');
+        document.getElementById('live-clock').innerHTML = `<i class="bi bi-clock"></i> ${now.toLocaleTimeString('he-IL')} | ${now.toLocaleDateString('he-IL')}`;
     }
 
     window.onload = () => {
-        renderStreams();
+        loadStreams();
         setInterval(updateClock, 1000);
         updateClock();
     };
