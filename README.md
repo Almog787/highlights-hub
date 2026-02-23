@@ -24,7 +24,7 @@ GNN is a sophisticated, **zero-backend** news aggregator engineered for real-tim
 | Feature | Details |
 | :--- | :--- |
 | **Status** | Active 🟢 |
-| **Last Updated** | 2026-02-23 14:44:50 UTC |
+| **Last Updated** | 2026-02-23 14:48:14 UTC |
 | **Deployment** | GitHub Pages |
 | **Architecture** | Serverless / Static |
 | **Analytics** | GTM-8NEMWLX7BF |
