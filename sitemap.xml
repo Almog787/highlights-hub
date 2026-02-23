@@ -1,83 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=CROATIA%3A%20HNL</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=CYPRUS%3A%201.%20Division</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ENGLAND%3A%20Championship</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ENGLAND%3A%20FA%20Cup</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ENGLAND%3A%20League%20One</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ENGLAND%3A%20Premier%20League</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=EUROPE%3A%20Champions%20League%2C%20Knockout%20Round%20Play-off</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=EUROPE%3A%20Conference%20League%2C%20Knockout%20Round%20Play-off</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=EUROPE%3A%20Europa%20League%2C%20Knockout%20Round%20Play-off</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=FRANCE%3A%20Ligue%201</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=GERMANY%3A%20Bundesliga</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=GERMANY%3A%20National%20cup</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ITALY%3A%20National%20cup</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=ITALY%3A%20Serie%20A</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=POLAND%3A%20Ekstraklasa</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=PORTUGAL%3A%20Liga%20Portugal</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=SPAIN%3A%20La%20Liga</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=SPAIN%3A%20National%20cup</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://yourusername.github.io/your-repo-name/?league=TURKEY%3A%20Super%20Lig</loc>
-    <changefreq>hourly</changefreq>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://almog787.github.io/sports-highlights-hub/</loc><priority>1.0</priority></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=TURKEY%3A%20Super%20Lig</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=SPAIN%3A%20La%20Liga</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=EUROPE%3A%20Conference%20League%2C%20Knockout%20Round%20Play-off</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=FRANCE%3A%20Ligue%201</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=CROATIA%3A%20HNL</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=GERMANY%3A%20Bundesliga</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=ENGLAND%3A%20Championship</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=PORTUGAL%3A%20Liga%20Portugal</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=CYPRUS%3A%201.%20Division</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=POLAND%3A%20Ekstraklasa</loc></url>
+<url><loc>https://almog787.github.io/sports-highlights-hub/?league=ITALY%3A%20Serie%20A</loc></url>
 </urlset>

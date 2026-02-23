@@ -2,401 +2,226 @@
     {
         "title": "Brest - Marseille",
         "competition": "FRANCE: Ligue 1",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730858.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699b90d831c42/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195530"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699b90d831c42/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1730858/",
+        "home_team": {
+            "name": "Brest",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Marseille",
+            "logo": null
+        }
     },
     {
         "title": "Athletic Bilbao - Elche",
         "competition": "SPAIN: La Liga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730463.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994c0836acb/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195543"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994c0836acb/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1730463/",
+        "home_team": {
+            "name": "Athletic Bilbao",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Elche",
+            "logo": null
+        }
     },
     {
         "title": "Blackburn - Preston NE",
         "competition": "ENGLAND: Championship",
-        "thumbnail": "https://www.scorebat.com/og/m/og1720736.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699910bfd1b6c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195545"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699910bfd1b6c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1720736/",
+        "home_team": {
+            "name": "Blackburn",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        },
+        "away_team": {
+            "name": "Preston NE",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        }
     },
     {
         "title": "Estrela Amadora - Tondela",
         "competition": "PORTUGAL: Liga Portugal",
-        "thumbnail": "https://www.scorebat.com/og/m/og1753044.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998ed4a72a6d/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T20:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195547"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998ed4a72a6d/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1753044/",
+        "home_team": {
+            "name": "Estrela Amadora",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Tondela",
+            "logo": null
+        }
     },
     {
         "title": "Sassuolo - Verona",
         "competition": "ITALY: Serie A",
-        "thumbnail": "https://www.scorebat.com/og/m/og1752159.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998e78bd2c2d/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195549"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998e78bd2c2d/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1752159/",
+        "home_team": {
+            "name": "Sassuolo",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Verona",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        }
     },
     {
         "title": "Mainz - Hamburg",
         "competition": "GERMANY: Bundesliga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1727877.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998e0a89a4a9/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T19:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195569"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998e0a89a4a9/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1727877/",
+        "home_team": {
+            "name": "Mainz",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Hamburg",
+            "logo": null
+        }
     },
     {
         "title": "Widzew - Cracovia",
         "competition": "POLAND: Ekstraklasa",
-        "thumbnail": "https://www.scorebat.com/og/m/og1821381.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998de325d806/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T19:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195571"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998de325d806/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1821381/",
+        "home_team": {
+            "name": "Widzew",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        },
+        "away_team": {
+            "name": "Cracovia",
+            "logo": null
+        }
     },
     {
         "title": "Vukovar - Slaven Koprivnica",
         "competition": "CROATIA: HNL",
-        "thumbnail": "https://www.scorebat.com/og/m/og1736792.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998c45119db0/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T17:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195573"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998c45119db0/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1736792/",
+        "home_team": {
+            "name": "Vukovar",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Slaven Koprivnica",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        }
     },
     {
         "title": "Rizespor - Kocaelispor",
         "competition": "TURKEY: Super Lig",
-        "thumbnail": "https://www.scorebat.com/og/m/og1747404.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998c1449447c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T17:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195574"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998c1449447c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1747404/",
+        "home_team": {
+            "name": "Rizespor",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Kocaelispor",
+            "logo": null
+        }
     },
     {
         "title": "Piast Gliwice - Motor Lublin",
         "competition": "POLAND: Ekstraklasa",
-        "thumbnail": "https://www.scorebat.com/og/m/og1821380.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998bb0db4095/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T17:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195576"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998bb0db4095/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1821380/",
+        "home_team": {
+            "name": "Piast Gliwice",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Motor Lublin",
+            "logo": null
+        }
     },
     {
         "title": "Enosis Paralimni - AEL",
         "competition": "CYPRUS: 1. Division",
-        "thumbnail": "https://www.scorebat.com/og/m/og1767006.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998b5b7dc24c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T17:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195577"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998b5b7dc24c/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1767006/",
+        "home_team": {
+            "name": "Enosis Paralimni",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        },
+        "away_team": {
+            "name": "AEL",
+            "logo": null
+        }
     },
     {
         "title": "Ypsonas - Aris Limassol",
         "competition": "CYPRUS: 1. Division",
-        "thumbnail": "https://www.scorebat.com/og/m/og1767004.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998b5b7dceb7/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-20T17:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195579"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998b5b7dceb7/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1767004/",
+        "home_team": {
+            "name": "Ypsonas",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        },
+        "away_team": {
+            "name": "Aris Limassol",
+            "logo": null
+        }
     },
     {
         "title": "Shkendija - Samsunspor",
         "competition": "EUROPE: Conference League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839483.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994e3d65fef/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-19T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195581"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994e3d65fef/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1839483/",
+        "home_team": {
+            "name": "Shkendija",
+            "logo": null
+        },
+        "away_team": {
+            "name": "Samsunspor",
+            "logo": null
+        }
     },
     {
         "title": "Omonoia - Rijeka",
         "competition": "EUROPE: Conference League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839482.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994e2c73a21/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
         "date": "2026-02-19T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195582"
+        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994e2c73a21/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
+        "url": "https://www.scorebat.com/embed/matchview/1839482/",
+        "home_team": {
+            "name": "Omonoia",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        },
+        "away_team": {
+            "name": "Rijeka",
+            "logo": null
+        }
     },
     {
         "title": "Noah - AZ",
         "competition": "EUROPE: Conference League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839477.jpeg",
+        "date": "2026-02-19T17:45:00+00:00",
         "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994dee51f87/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-19T17:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195584"
-    },
-    {
-        "title": "Lille - Crvena Zvezda",
-        "competition": "EUROPE: Europa League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839465.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69994dbbc87e6/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-19T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195588"
-    },
-    {
-        "title": "Zrinjski - Crystal Palace",
-        "competition": "EUROPE: Conference League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839479.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69991074c959a/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-19T17:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195590"
-    },
-    {
-        "title": "Fenerbahce - Nottingham Forest",
-        "competition": "EUROPE: Europa League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839462.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998f2c816490/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-19T17:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195592"
-    },
-    {
-        "title": "PAOK - Celta Vigo",
-        "competition": "EUROPE: Europa League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839463.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6998b4e5bff55/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-19T17:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195593"
-    },
-    {
-        "title": "Olympiakos - Bayer Leverkusen",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839451.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6997ea3cc46c4/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195595"
-    },
-    {
-        "title": "Club Brugge - Atletico Madrid",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839450.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6997ea1fcc61f/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195596"
-    },
-    {
-        "title": "Bodo-Glimt - Inter Milan",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839449.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6997ea08959d7/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195598"
-    },
-    {
-        "title": "Wolves - Arsenal",
-        "competition": "ENGLAND: Premier League",
-        "thumbnail": "https://www.scorebat.com/og/m/og1706121.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699674b436484/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195599"
-    },
-    {
-        "title": "AC Milan - Como",
-        "competition": "ITALY: Serie A",
-        "thumbnail": "https://www.scorebat.com/og/m/og1752139.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6996439b4b677/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195601"
-    },
-    {
-        "title": "Wigan - Luton",
-        "competition": "ENGLAND: League One",
-        "thumbnail": "https://www.scorebat.com/og/m/og1737690.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699642422466f/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-18T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195603"
-    },
-    {
-        "title": "Monaco - PSG",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839447.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69969730ce184/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-17T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195604"
-    },
-    {
-        "title": "Borussia Dortmund - Atalanta",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839446.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69961c034ddbb/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-17T20:15:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195606"
-    },
-    {
-        "title": "Galatasaray - Juventus",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839444.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69961bc7254c4/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-17T17:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195607"
-    },
-    {
-        "title": "Benfica - Real Madrid",
-        "competition": "EUROPE: Champions League, Knockout Round Play-off",
-        "thumbnail": "https://www.scorebat.com/og/m/og1839445.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69961bafe0ccb/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-17T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195611"
-    },
-    {
-        "title": "Girona - Barcelona",
-        "competition": "SPAIN: La Liga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730451.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6993ec34df6ba/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-16T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195613"
-    },
-    {
-        "title": "Napoli - Roma",
-        "competition": "ITALY: Serie A",
-        "thumbnail": "https://www.scorebat.com/og/m/og1752146.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69924f03aa6bf/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-15T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195614"
-    },
-    {
-        "title": "Rayo Vallecano - Atletico Madrid",
-        "competition": "SPAIN: La Liga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730457.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6992a1d9baba0/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-15T15:15:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195616"
-    },
-    {
-        "title": "Arsenal - Wigan",
-        "competition": "ENGLAND: FA Cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1838208.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/699221e0c4fb1/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-15T16:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195617"
-    },
-    {
-        "title": "Inter Milan - Juventus",
-        "competition": "ITALY: Serie A",
-        "thumbnail": "https://www.scorebat.com/og/m/og1752147.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6991122049dd2/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195619"
-    },
-    {
-        "title": "Bayer Leverkusen - St. Pauli",
-        "competition": "GERMANY: Bundesliga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1727868.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6992f207d5f15/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T14:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195621"
-    },
-    {
-        "title": "Manchester City - Salford City",
-        "competition": "ENGLAND: FA Cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1838002.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69916a88c2124/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T15:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195622"
-    },
-    {
-        "title": "Real Madrid - Real Sociedad",
-        "competition": "SPAIN: La Liga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730458.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6991378cde2eb/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195624"
-    },
-    {
-        "title": "Liverpool - Brighton",
-        "competition": "ENGLAND: FA Cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1838007.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/69910aae3a0c8/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195626"
-    },
-    {
-        "title": "Werder Bremen - Bayern Munich",
-        "competition": "GERMANY: Bundesliga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1727870.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6990afb393b32/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-14T14:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195627"
-    },
-    {
-        "title": "Rennes - PSG",
-        "competition": "FRANCE: Ligue 1",
-        "thumbnail": "https://www.scorebat.com/og/m/og1730855.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/6992a2002f34a/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-13T18:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195629"
-    },
-    {
-        "title": "Hull City - Chelsea",
-        "competition": "ENGLAND: FA Cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1837660.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698fb2c3429c6/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-13T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195630"
-    },
-    {
-        "title": "Pisa - AC Milan",
-        "competition": "ITALY: Serie A",
-        "thumbnail": "https://www.scorebat.com/og/m/og1752150.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698fb10102d99/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-13T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195634"
-    },
-    {
-        "title": "Borussia Dortmund - Mainz",
-        "competition": "GERMANY: Bundesliga",
-        "thumbnail": "https://www.scorebat.com/og/m/og1727871.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698fa37b5487e/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-13T19:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195636"
-    },
-    {
-        "title": "Atletico Madrid - Barcelona",
-        "competition": "SPAIN: National cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1837649.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698e6effca9b3/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-12T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195637"
-    },
-    {
-        "title": "Brentford - Arsenal",
-        "competition": "ENGLAND: Premier League",
-        "thumbnail": "https://www.scorebat.com/og/m/og1706071.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698e67bb01b93/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-12T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195639"
-    },
-    {
-        "title": "Bayern Munich - RB Leipzig",
-        "competition": "GERMANY: National cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1837161.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698da1c0d91b3/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-11T19:45:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195640"
-    },
-    {
-        "title": "Manchester City - Fulham",
-        "competition": "ENGLAND: Premier League",
-        "thumbnail": "https://www.scorebat.com/og/m/og1706075.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698d1d0e542fa/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-11T19:30:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195642"
-    },
-    {
-        "title": "Sunderland - Liverpool",
-        "competition": "ENGLAND: Premier League",
-        "thumbnail": "https://www.scorebat.com/og/m/og1706073.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698d1b5b0cd1e/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-11T20:15:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195644"
-    },
-    {
-        "title": "Napoli - Como",
-        "competition": "ITALY: National cup",
-        "thumbnail": "https://www.scorebat.com/og/m/og1836118.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698bdbc447fb2/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-10T20:00:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195829"
-    },
-    {
-        "title": "West Ham United - Manchester United",
-        "competition": "ENGLAND: Premier League",
-        "thumbnail": "https://www.scorebat.com/og/m/og1706074.jpeg",
-        "embed_code": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/698bccef9e7db/?utm_source=api&utm_medium=video&utm_campaign=lgc' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>",
-        "date": "2026-02-10T20:15:00+00:00",
-        "timestamp": "2026-02-23T10:23:55.195832"
+        "url": "https://www.scorebat.com/embed/matchview/1839477/",
+        "home_team": {
+            "name": "Noah",
+            "logo": null
+        },
+        "away_team": {
+            "name": "AZ",
+            "logo": "https://www.thesportsdb.com/images/media/team/badge/small/default.png"
+        }
     }
 ]

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://almog787.github.io/sports-highlights-hub/sitemap.xml
