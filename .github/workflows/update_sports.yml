@@ -1,12 +1,12 @@
-name: Generate Static Sports Site
+name: Update Sports Infrastructure
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs every hour
+    - cron: '*/30 * * * *' # Increased frequency: runs every 30 minutes for live-ish data
   workflow_dispatch:
 
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -22,16 +22,17 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Static Site Generator
+      - name: Run Scraper & Generator
         env:
-          # Fail-safe: If secret doesn't exist, it passes empty string
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          # Optional: Add this secret in your GitHub Repo settings for live scores
+          LIVE_API_KEY: ${{ secrets.LIVE_SCORES_API_KEY }}
         run: python main.py
 
-      - name: Commit and Push Built Pages
+      - name: Commit and Push Updates
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/
-          git commit -m "Auto-build static site and sitemap: $(date)" || echo "No changes to commit"
+          git add data/*.json
+          git add sitemap.xml
+          git commit -m "Automated update: Content, Live Scores & Sitemap [$(date)]" || echo "No changes to commit"
           git push
