@@ -13,8 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-3359114283161345">
     
-    <title>GNN | Global News Network Live</title>
+    <title>GNN | Global News Network | Live World Updates</title>
+    <meta name="description" content="Verified international news hub featuring real-time market data, breaking world headlines, and live video broadcasts.">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "Global News Network",
+      "alternateName": "GNN",
+      "url": "https://almog787.github.io/highlights-hub/",
+      "logo": "https://via.placeholder.com/200x200?text=GNN",
+      "foundingDate": "2026",
+      "knowsAbout": ["World News", "Finance", "Technology", "Geopolitics"]
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
@@ -22,157 +36,181 @@
         :root { 
             --gnn-navy: #002147; 
             --gnn-red: #cc0000; 
-            --gnn-dark: #1a1a1a;
-            --gnn-gray: #f4f7f6;
+            --gnn-dark: #121212;
+            --gnn-gray: #f8f9fa;
         }
 
         body { 
-            font-family: 'Inter', sans-serif; 
             background-color: var(--gnn-gray);
-            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: #333;
         }
 
-        .navbar { background: var(--gnn-navy) !important; border-bottom: 5px solid var(--gnn-red); }
-
-        .ticker-wrap { 
-            background: #fff; 
-            padding: 10px 0; 
-            overflow: hidden; 
-            white-space: nowrap; 
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            align-items: center;
+        /* Navbar Style */
+        .navbar { 
+            background: var(--gnn-navy) !important; 
+            border-bottom: 4px solid var(--gnn-red);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .ticker-label { 
-            background: var(--gnn-red); 
-            color: white; 
-            padding: 2px 15px; 
-            font-weight: bold; 
-            margin-right: 20px;
-            z-index: 5;
-        }
-
-        .ticker-content { 
-            display: inline-block; 
-            animation: ticker-kf 60s linear infinite;
-        }
-
-        @keyframes ticker-kf {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .news-card { 
-            border: none; 
-            transition: 0.3s; 
-            height: 100%; 
+        /* Container Styling */
+        .content-box {
             background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            height: 100%;
         }
 
-        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .section-title {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 5px solid var(--gnn-red);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
 
-        .card-img-top { height: 200px; object-fit: cover; background: #eee; }
+        /* Video Responsive Fix */
+        .video-wrapper {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
 
-        .footer { background: var(--gnn-dark); color: white; padding: 40px 0; margin-top: 50px; }
+        /* Footer */
+        footer {
+            background: var(--gnn-dark);
+            color: #888;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+        .builder-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gnn-red);
+        }
+        .builder-link:hover { color: var(--gnn-red); }
     </style>
 </head>
 <body>
 
-<div id="tradingview-ticker">
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-        {
-          "symbols": [
-            {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
-            {"proName": "FX_IDC:USDILS", "title": "USD/ILS"},
-            {"proName": "NASDAQ:AAPL", "title": "Apple"},
-            {"proName": "FX_IDC:EURUSD", "title": "EUR/USD"}
-          ],
-          "colorTheme": "light", "isTransparent": false, "displayMode": "adaptive", "locale": "en"
-        }
-        </script>
-    </div>
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      { "proName": "FOREXCOM:SPX3500", "title": "S&P 500" },
+      { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+      { "proName": "FX_IDC:USDILS", "title": "USD/ILS" },
+      { "proName": "NASDAQ:AAPL", "title": "Apple" },
+      { "proName": "NASDAQ:TSLA", "title": "Tesla" }
+    ],
+    "showSymbolLogo": true, "colorTheme": "light", "isTransparent": false, "displayMode": "adaptive", "locale": "en"
+    }
+    </script>
 </div>
 
-<nav class="navbar navbar-dark">
-    <div class="container d-flex justify-content-between">
-        <a class="navbar-brand fw-bold" href="#">GLOBAL NEWS<span class="text-danger">.</span></a>
-        <span class="text-white-50 small" id="current-date"></span>
+<nav class="navbar navbar-dark sticky-top p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold fs-3" href="#">GNN<span class="text-danger">.</span></a>
+        <div class="d-none d-md-block text-white-50">
+            <i class="bi bi-broadcast text-danger"></i> LIVE BROADCAST CENTRE
+        </div>
+        <div id="current-time" class="text-white small fw-light"></div>
     </div>
 </nav>
 
-<div class="ticker-wrap">
-    <span class="ticker-label shadow-sm">BREAKING</span>
-    <div id="ticker-feed" class="ticker-content fw-bold">
-        Loading latest world headlines...
-    </div>
-</div>
-
 <main class="container my-5">
-    <h3 class="fw-bold mb-4" style="border-left: 5px solid var(--gnn-red); padding-left: 15px;">TOP STORIES</h3>
-    <div class="row g-4" id="main-content">
-        <div class="text-center py-5">
-            <div class="spinner-border text-danger" role="status"></div>
-            <p class="mt-3 text-muted">Fetching live feed...</p>
+    <div class="row g-4">
+        
+        <div class="col-lg-8">
+            <div class="content-box">
+                <h4 class="section-title">Verified Headlines</h4>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                    {
+                    "feedMode": "all_symbols",
+                    "colorTheme": "light",
+                    "isTransparent": false,
+                    "displayMode": "regular",
+                    "width": "100%",
+                    "height": 800,
+                    "locale": "en"
+                    }
+                    </script>
+                </div>
+            </div>
         </div>
+
+        <div class="col-lg-4">
+            <div class="content-box mb-4">
+                <h5 class="section-title">Global Stream</h5>
+                <div class="video-wrapper ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/gCNeDWCI0vo?autoplay=1&mute=1" title="Live Stream" allowfullscreen></iframe>
+                </div>
+                <p class="small text-muted mt-3">
+                    <i class="bi bi-info-circle"></i> Real-time international video coverage from verified news bureaus.
+                </p>
+            </div>
+
+            <div class="content-box">
+                <h5 class="section-title">Market Pulse</h5>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+                    {
+                    "colorTheme": "light",
+                    "dateRange": "12M",
+                    "exchange": "US",
+                    "showChart": true,
+                    "locale": "en",
+                    "width": "100%",
+                    "height": 450
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+
     </div>
 </main>
 
-<footer class="footer text-center">
-    <div class="container">
-        <p class="mb-1">© 2026 GNN | Global News Network</p>
-        <p class="small text-white-50">Developed by <a href="https://github.com/almog787" class="text-white fw-bold text-decoration-none">Almog787</a></p>
+<footer>
+    <div class="container text-center">
+        <h4 class="text-white fw-bold mb-4">GLOBAL NEWS NETWORK</h4>
+        <div class="d-flex justify-content-center gap-4 mb-4" style="font-size: 1.5rem;">
+            <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <p class="small opacity-50">
+                    GNN provides decentralized, automated news aggregation. Content is sourced from global financial feeds and verified broadcasting agencies. 
+                </p>
+                <hr class="border-secondary opacity-25 my-4">
+                <p class="mb-1">© 2026 GNN International. All rights reserved.</p>
+                <p class="small">
+                    Architected by <a href="https://github.com/almog787" class="builder-link" target="_blank">Almog787</a>
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 
 <script>
-    document.getElementById('current-date').innerText = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-
-    async function fetchNews() {
-        const contentArea = document.getElementById('main-content');
-        const ticker = document.getElementById('ticker-feed');
-        
-        // מקור החדשות
-        const newsUrl = `https://saurav.tech/NewsAPI/top-headlines/category/general/us.json?t=${new Date().getTime()}`;
-
-        try {
-            const response = await fetch(newsUrl);
-            const data = await response.json();
-            const articles = data.articles;
-
-            // עדכון הטיקר
-            ticker.innerHTML = articles.slice(0, 10).map(a => `• ${a.title}`).join(' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ');
-
-            // עדכון הכתבות
-            contentArea.innerHTML = '';
-            articles.slice(0, 15).forEach(item => {
-                if (!item.urlToImage) return;
-
-                contentArea.innerHTML += `
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card news-card">
-                            <img src="${item.urlToImage}" class="card-img-top" onerror="this.src='https://via.placeholder.com/600x400?text=GNN+NEWS'">
-                            <div class="card-body d-flex flex-column">
-                                <span class="text-danger small fw-bold mb-2">${item.source.name}</span>
-                                <h5 class="card-title fw-bold">${item.title}</h5>
-                                <p class="card-text text-muted small">${item.description ? item.description.substring(0, 100) + '...' : ''}</p>
-                                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
-                                    <span class="small text-muted">${new Date(item.publishedAt).toLocaleDateString()}</span>
-                                    <a href="${item.url}" target="_blank" class="btn btn-sm btn-danger">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-            });
-        } catch (error) {
-            contentArea.innerHTML = '<div class="col-12 text-center py-5"><p class="alert alert-warning">News feed is currently unavailable. Please try again later.</p></div>';
-        }
+    // Update live clock
+    function updateClock() {
+        const now = new Date();
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        document.getElementById('current-time').innerText = now.toLocaleDateString('en-US', options).toUpperCase();
     }
-
-    window.onload = fetchNews;
+    setInterval(updateClock, 1000);
+    updateClock();
 </script>
+
 </body>
 </html>
