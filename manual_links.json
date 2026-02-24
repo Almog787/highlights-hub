@@ -1,5 +1,5 @@
 {
-  "my_links": [
+  "manual_section": [
     {
       "title": "אני מצחצח שיניים",
       "url": "https://www.youtube.com/embed/DPILWI69AAQ?start=65&rel=0"
@@ -7,14 +7,24 @@
     {
       "title": "ציפי שביט - ברבאבא",
       "url": "https://www.youtube.com/embed/aqZMHUEE3uA?rel=0"
-    },
+    }
+  ],
+  "purim": [
     {
-      "title": "מחרוזת פורים עוזי חיטמן  ",
+      "title": "מחרוזת פורים עוזי חיטמן",
       "url": "https://www.youtube.com/embed/iFZzVq1XTv4?rel=0"
     },
     {
       "title": "שירי פורים לילדים - מחרוזת פורים",
       "url": "https://www.youtube.com/embed/HHZOfcT66OU?rel=0"
+    }
+  ],
+  "morning_circle": [],
+  "movement_play": [],
+  "birthday": [
+    {
+      "title": "יום הולדת לשני - עדן חסון",
+      "url": "https://www.youtube.com/embed/YpS80oHhS9s"
     }
   ]
 }
