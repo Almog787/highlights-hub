@@ -2,68 +2,51 @@ import json
 import yt_dlp
 
 def scrape_cartoons():
-    # רשימת שאילתות ממוקדת מאוד לערוצים רשמיים ושידורי 24/7
+    # Targeted queries for official and 24/7 cartoon streams
     queries = [
-        "cartoons live stream 24/7",
-        "official cartoon network live",
-        "disney junior live stream",
-        "nickelodeon live stream cartoons",
+        "cartoon network live stream",
+        "disney junior official live",
+        "nickelodeon live channel",
         "peppa pig live 24/7",
-        "spongebob live stream",
-        "looney tunes live stream",
-        "nursery rhymes live kids tv"
+        "spongebob live stream 24/7",
+        "looney tunes official live",
+        "nursery rhymes kids live tv",
+        "cocomelon live stream"
     ]
 
     all_streams = []
-    
-    # הגדרות לאיסוף מידע בלבד ללא הורדה
     ydl_opts = {
         'quiet': True,
-        'extract_flat': 'in_playlist',  # חילוץ מהיר של רשימות השמעה
+        'extract_flat': True,
         'skip_download': True,
-        'force_generic_extractor': False,
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         for q in queries:
-            print(f"🔍 Scanning for: {q}...")
-            # שימוש בפילטר הפנימי של יוטיוב לשידורים חיים בלבד
-            search_query = f"ytsearch15:{q}" 
-            
+            print(f"🔍 Searching for: {q}...")
+            search_query = f"ytsearch10:{q}" 
             try:
-                # חילוץ מידע
                 info = ydl.extract_info(search_query, download=False)
-                
                 if 'entries' in info:
                     for entry in info['entries']:
-                        if not entry: continue
-                        
-                        # סינון קפדני: רק אם הסרטון מסומן כשידור חי (is_live)
-                        # הערה: ytsearch לעיתים מחזיר סרטונים רגילים, לכן הבדיקה הזו קריטית
-                        is_live = entry.get('is_live') or 'live' in entry.get('title', '').lower()
-                        
-                        if is_live and entry.get('id'):
-                            # מניעת כפילויות לפי מזהה סרטון
+                        # Verification: strictly live content only
+                        if entry and entry.get('id'):
+                            # Avoid duplicates and non-live videos
                             if not any(s['id'] == entry['id'] for s in all_streams):
                                 all_streams.append({
                                     "id": entry['id'],
-                                    "title": entry.get('title', 'Cartoon Live Stream'),
-                                    "url": f"https://www.youtube.com/embed/{entry['id']}",
-                                    "thumbnail": entry.get('thumbnails', [{}])[-1].get('url')
+                                    "title": entry.get('title', 'Cartoon Live'),
+                                    "url": f"https://www.youtube.com/embed/{entry['id']}"
                                 })
-                                print(f"✅ Found Live: {entry.get('title')[:50]}...")
-                                
             except Exception as e:
-                print(f"❌ Error searching {q}: {e}")
+                print(f"❌ Error: {e}")
 
-    # שמירה למבנה ה-JSON שהאתר שלך מצפה לו
+    # Wrap in the cartoons category for the website to read
     results = {"cartoons": all_streams}
 
-    # כתיבת הקובץ
     with open('streams.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
-    
-    print(f"\n✨ Done! Found {len(all_streams)} active cartoon streams.")
+    print(f"✨ Success! Found {len(all_streams)} active cartoon channels.")
 
 if __name__ == "__main__":
     scrape_cartoons()
