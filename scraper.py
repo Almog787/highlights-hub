@@ -1,43 +1,47 @@
 import json
 import yt_dlp
 
-def scrape_kindergarten_content():
+def scrape_kindergarten_dashboard():
     all_results = {}
-    # שימוש ב-ydl_opts מהיר ללא הורדה
-    ydl_opts = {'quiet': True, 'extract_flat': True, 'skip_download': True}
+    ydl_opts = {
+        'quiet': True, 
+        'extract_flat': True, 
+        'skip_download': True,
+        'format': 'best'
+    }
 
-    # הגדרת שאילתות חיפוש ממוקדות לגננות - ללא "המומינים"
+    # קטגוריות משופרות ומדויקות לפי סדר היום בגן
     categories = {
-        "purim": "שירי פורים לילדים מחרוזת 2024",
-        "morning": "שירי בוקר טוב למפגש בגן ילדים",
-        "movement": "שירי הפעלה ותנועה לילדים מירב האוסמן אריאלה סביר",
-        "classics": "שירי ילדות ישראלית קלאסיים לילדים",
-        "relax": "מוזיקה רגועה למנוחה בגן ילדים"
+        "purim": "שירי פורים לילדים ופעוטות מחרוזת רשמי",
+        "morning_circle": "שירי מפגש בוקר בוקר טוב לגן ילדים",
+        "movement_play": "שירי הפעלה ותנועה מירב האוסמן אריאלה סביר",
+        "israeli_classics": "שירי ילדות ישראלית קלאסיים מחרוזת",
+        "relaxation_sleep": "מוזיקה שקטה למנוחה בגן ילדים",
+        "story_time": "סיפורים לפני שינה לילדים מדובב"
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         for key, query in categories.items():
-            print(f"🔄 סורק תוכן עבור: {query}")
-            category_list = []
+            print(f"🔄 אוסף תוכן לקטגוריית: {key}")
+            items = []
             try:
-                # איסוף 12 סרטונים מכל קטגוריה
-                results = ydl.extract_info(f"ytsearch12:{query}", download=False)
-                if 'entries' in results:
-                    for entry in results['entries']:
+                # איסוף 12 סרטונים איכותיים לכל קטגוריה
+                info = ydl.extract_info(f"ytsearch12:{query}", download=False)
+                if 'entries' in info:
+                    for entry in info['entries']:
                         if entry:
-                            category_list.append({
+                            items.append({
                                 "id": entry['id'],
-                                "title": entry.get('title').split('|')[0].split('(')[0].strip(), # ניקוי כותרות
+                                "title": entry.get('title').split('|')[0].strip(), # ניקוי כותרות
                                 "url": f"https://www.youtube.com/embed/{entry['id']}?rel=0"
                             })
-                all_results[key] = category_list
+                all_results[key] = items
             except Exception as e:
-                print(f"שגיאה באיסוף {key}: {e}")
+                print(f"Error in {key}: {e}")
 
-    # שמירה לקובץ ה-JSON שמזין את האתר
     with open('streams.json', 'w', encoding='utf-8') as f:
         json.dump(all_results, f, indent=4, ensure_ascii=False)
-    print("✨ הדשבורד עודכן בהצלחה ללא תוכניות טלוויזיה!")
+    print("✅ הדשבורד המקצועי עודכן!")
 
 if __name__ == "__main__":
-    scrape_kindergarten_content()
+    scrape_kindergarten_dashboard()
