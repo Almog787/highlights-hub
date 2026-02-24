@@ -26,7 +26,7 @@
             --movement-color: #4caf50;
             --classics-color: #2196f3;
             --relax-color: #607d8b;
-            --manual-color: #e67e22; /* צבע לקטגוריה הידנית */
+            --manual-color: #e67e22;
         }
         
         body { background-color: #f0f2f5; font-family: 'Assistant', sans-serif; }
@@ -51,22 +51,17 @@
             font-weight: 800;
             transition: 0.3s;
             display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            align-items: center; gap: 8px;
         }
 
         .btn-purim { color: var(--purim-color); border: 1px solid var(--purim-color); }
         .btn-purim.active { background: var(--purim-color); color: white; }
-        
         .btn-morning { color: var(--morning-color); border: 1px solid var(--morning-color); }
         .btn-morning.active { background: var(--morning-color); color: white; }
-
         .btn-movement { color: var(--movement-color); border: 1px solid var(--movement-color); }
         .btn-movement.active { background: var(--movement-color); color: white; }
-
         .btn-classics { color: var(--classics-color); border: 1px solid var(--classics-color); }
         .btn-classics.active { background: var(--classics-color); color: white; }
-
         .btn-manual { color: var(--manual-color); border: 1px solid var(--manual-color); }
         .btn-manual.active { background: var(--manual-color); color: white; }
 
@@ -81,9 +76,21 @@
             border-bottom: 4px solid #ccc;
         }
 
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        /* סגנון התמונה המקדימה */
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; background-color: #000; cursor: pointer; }
+        .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s; }
+        .video-container:hover img { opacity: 1; }
+        
+        /* כפתור Play מעוצב */
+        .play-button {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 60px; height: 60px; background-color: rgba(255, 0, 0, 0.9);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 30px; z-index: 2; transition: 0.3s;
+        }
+        .video-container:hover .play-button { transform: translate(-50%, -50%) scale(1.1); background-color: #f00; }
+        
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
         .video-title { padding: 12px; font-weight: 600; font-size: 0.9rem; height: 60px; overflow: hidden; }
     </style>
 </head>
@@ -111,7 +118,6 @@
 
 <main class="container py-4">
     <div id="manual_section" class="stream-grid active"></div>
-    
     <div id="purim" class="stream-grid"></div>
     <div id="morning_circle" class="stream-grid"></div>
     <div id="movement_play" class="stream-grid"></div>
@@ -127,20 +133,28 @@
         btn.classList.add('active');
     }
 
+    // פונקציה לטעינת הנגן בלחיצה
+    function loadVideo(container, videoUrl) {
+        container.innerHTML = `<iframe src="${videoUrl}&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    }
+
+    // חילוץ ID של סרטון לצורך תמונה
+    function getThumb(url) {
+        const id = url.split('/embed/')[1]?.split('?')[0];
+        return `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+    }
+
     async function initDashboard() {
         try {
-            // 1. טעינת נתונים אוטומטיים
             const resAuto = await fetch('streams.json?v=' + Date.now());
             const dataAuto = await resAuto.json();
 
-            // 2. טעינת נתונים ידניים
             let dataManual = { my_links: [] };
             try {
                 const resManual = await fetch('manual_links.json?v=' + Date.now());
                 if (resManual.ok) dataManual = await resManual.json();
             } catch (e) { console.warn("Manual links file not found."); }
 
-            // איחוד ומיפוי נתונים
             const allData = { 
                 ...dataAuto, 
                 "manual_section": dataManual.my_links || [] 
@@ -152,8 +166,9 @@
                 
                 grid.innerHTML = items.map(item => `
                     <div class="video-card">
-                        <div class="video-container">
-                            <iframe src="${item.url}" allowfullscreen loading="lazy"></iframe>
+                        <div class="video-container" onclick="loadVideo(this, '${item.url}')">
+                            <img src="${getThumb(item.url)}" alt="${item.title}" loading="lazy">
+                            <div class="play-button"><i class="bi bi-play-fill"></i></div>
                         </div>
                         <div class="video-title">${item.title}</div>
                     </div>
