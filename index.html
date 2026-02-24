@@ -65,6 +65,22 @@
         .btn-manual { color: var(--manual-color); border: 1px solid var(--manual-color); }
         .btn-manual.active { background: var(--manual-color); color: white; }
 
+        /* שורת חיפוש */
+        .search-container {
+            max-width: 500px;
+            margin: 20px auto 0;
+            padding: 0 15px;
+        }
+        .search-input {
+            border-radius: 25px;
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            width: 100%;
+            outline: none;
+            transition: 0.3s;
+        }
+        .search-input:focus { border-color: var(--classics-color); box-shadow: 0 0 8px rgba(33, 150, 243, 0.2); }
+
         .stream-grid { display: none; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 0; }
         .stream-grid.active { display: grid; }
 
@@ -123,6 +139,10 @@
     </div>
 </div>
 
+<div class="search-container">
+    <input type="text" id="songSearch" class="search-input" placeholder="חפשי שיר לפי שם..." onkeyup="filterSongs()">
+</div>
+
 <main class="container py-4">
     <div id="manual_section" class="stream-grid active"></div>
     <div id="purim" class="stream-grid"></div>
@@ -145,6 +165,25 @@
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         btn.classList.add('active');
+        // איפוס החיפוש במעבר קטגוריה כדי לא לבלבל
+        document.getElementById('songSearch').value = '';
+        filterSongs();
+    }
+
+    // פונקציית החיפוש
+    function filterSongs() {
+        const query = document.getElementById('songSearch').value.toLowerCase();
+        const activeGrid = document.querySelector('.stream-grid.active');
+        const cards = activeGrid.querySelectorAll('.video-card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('.video-title').innerText.toLowerCase();
+            if (title.includes(query)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
     }
 
     function loadVideo(container, videoUrl) {
@@ -189,7 +228,6 @@
         } catch (e) { console.error("שגיאה בטעינת הקבצים:", e); }
     }
 
-    // פונקציית עזר להמרת מספר לגימטריה (עבור יום ושנה)
     function getGematria(num) {
         const letters = {
             1000: 'תתק', 900: 'תתק', 800: 'תת', 700: 'תש', 600: 'תר', 500: 'תק', 400: 'ת', 300: 'ש', 200: 'ר', 100: 'ק',
@@ -197,41 +235,29 @@
             9: 'ט', 8: 'ח', 7: 'ז', 6: 'ו', 5: 'ה', 4: 'ד', 3: 'ג', 2: 'ב', 1: 'א'
         };
         let str = '';
-        if (num >= 5000) num -= 5000; // הורדת אלפים (ה' אלפים)
-        
+        if (num >= 5000) num -= 5000;
         const keys = Object.keys(letters).sort((a, b) => b - a);
         for (let key of keys) {
             while (num >= key) {
-                // תיקון ט"ו וט"ז
                 if (num === 15) { str += 'טו'; num = 0; break; }
                 if (num === 16) { str += 'טז'; num = 0; break; }
                 str += letters[key];
                 num -= key;
             }
         }
-        
-        // הוספת גרשיים
         if (str.length === 1) return str + "'";
         return str.slice(0, -1) + '"' + str.slice(-1);
     }
 
     function updateDateTime() {
         const now = new Date();
-        
-        // שעון לוגי
         document.getElementById('clock-time').innerText = now.toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        
-        // תאריך לועזי
         document.getElementById('date-gregorian').innerText = now.toLocaleDateString('he-IL', { day: 'numeric', month: 'long', year: 'numeric' });
-        
-        // תאריך עברי אותיות (יום בחודש, שם חודש, שנה בגימטריה)
         const heOptions = { day: 'numeric', month: 'long', year: 'numeric' };
         const heDateParts = new Intl.DateTimeFormat('he-IL-u-ca-hebrew', heOptions).formatToParts(now);
-        
         const day = parseInt(heDateParts.find(p => p.type === 'day').value);
         const month = heDateParts.find(p => p.type === 'month').value;
         const year = parseInt(heDateParts.find(p => p.type === 'year').value);
-        
         const hebrewFormatted = `${getGematria(day)} ב${month} ${getGematria(year)}`;
         document.getElementById('date-hebrew').innerText = hebrewFormatted;
     }
