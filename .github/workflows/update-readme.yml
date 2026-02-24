@@ -1,3 +1,15 @@
+name: Update Dashboard README
+
+on:
+  workflow_dispatch: # הגדרה זו מאפשרת את כפתור ההרצה הידנית ב-GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
       - name: Generate README File
         run: |
           echo "# 🎵 דשבורד הגננת המקצועי | גרסה 2.0" > README.md
@@ -13,14 +25,16 @@
           echo "* 🎭 **חגי ישראל:** דגש על שירי פורים והפעלות לחג." >> README.md
           echo "* ☀️ **ניהול סדר יום:** קטגוריות ייעודיות למפגש בוקר, תנועה, ומוזיקה מרגיעה למנוחה." >> README.md
           echo "* 🇮🇱 **שירי ילדות:** מיטב הקלאסיקות הישראליות לגילאי 0-4." >> README.md
-          echo "* 🛠️ **בקרה מלאה:** אפשרות לקבוע זמני התחלה מדויקים לסרטונים." >> README.md
-          echo "" >> README.md
-          echo "## 🤖 טכנולוגיה" >> README.md
-          echo "* **Automation:** בוט Python הסורק ומעדכן תכנים אוטומטית כל 6 שעות." >> README.md
-          echo "* **Dual-Source:** שילוב חכם בין איסוף אוטומטי לניהול תוכן ידני." >> README.md
-          echo "* **Analytics:** מעקב מלא אחר שימושיות לשיפור חוויית הגננת." >> README.md
           echo "" >> README.md
           echo "## 👨‍💻 מפתח המערכת" >> README.md
           echo "[Almog787](https://github.com/Almog787)" >> README.md
           echo "" >> README.md
-          echo "*Last Build: $(date)*" >> README.md
+          echo "*עודכן לאחרונה: $(date)*" >> README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README manually" || exit 0
+          git push
