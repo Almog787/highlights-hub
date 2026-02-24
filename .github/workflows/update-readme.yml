@@ -1,40 +1,53 @@
 name: Update Dashboard README
 
 on:
-  workflow_dispatch: # הגדרה זו מאפשרת את כפתור ההרצה הידנית ב-GitHub
+  workflow_dispatch: # הפעלה ידנית בלבד
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # הרשאה חיונית לכתיבת הקובץ בחזרה ל-GitHub
+    
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # גרסה מעודכנת
 
       - name: Generate README File
         run: |
-          echo "# 🎵 דשבורד הגננת המקצועי | גרסה 2.0" > README.md
+          echo "# 🎵 דשבורד הגננת המקצועי | המרכז המוזיקלי" > README.md
           echo "" >> README.md
           echo "[![Site Status](https://img.shields.io/website?url=https%3A%2F%2Falmog787.github.io%2Fhighlights-hub%2F&logo=googlechrome&logoColor=white)](https://almog787.github.io/highlights-hub/)" >> README.md
+          echo "![GitHub last commit](https://img.shields.io/github/last-commit/Almog787/highlights-hub?color=blue)" >> README.md
+          echo "" >> README.md
+          echo "## 🌍 Project About" >> README.md
+          echo "A high-performance, automated media hub tailored for early childhood educators (ages 0-4). Built with a focus on speed, simplicity, and pedagogical flow." >> README.md
+          echo "" >> README.md
+          echo "### 🚀 Key Features" >> README.md
+          echo "* **Smart Automation:** Python-based scraper updates seasonal content every 6 hours." >> README.md
+          echo "* **Smart Lazy Loading:** Instant load times by using Thumbnail-to-Player rendering." >> README.md
+          echo "* **Dual-Source Integration:** Combines automated discovery with manual curation." >> README.md
+          echo "* **Zero-Backend:** Purely static architecture hosted on GitHub Pages." >> README.md
           echo "" >> README.md
           echo "## 🔗 כניסה מהירה" >> README.md
           echo "### 👉 **[לחצי כאן לכניסה לדשבורד המוזיקלי](https://almog787.github.io/highlights-hub/)**" >> README.md
           echo "" >> README.md
           echo "---" >> README.md
-          echo "## 🌟 מה חדש בגרסה הזו?" >> README.md
-          echo "* ⭐ **המבחר שלי:** קטגוריה אישית הנשלטת ידנית דרך קובץ manual_links.json." >> README.md
-          echo "* 🎭 **חגי ישראל:** דגש על שירי פורים והפעלות לחג." >> README.md
-          echo "* ☀️ **ניהול סדר יום:** קטגוריות ייעודיות למפגש בוקר, תנועה, ומוזיקה מרגיעה למנוחה." >> README.md
-          echo "* 🇮🇱 **שירי ילדות:** מיטב הקלאסיקות הישראליות לגילאי 0-4." >> README.md
+          echo "## 🌟 מה חדש בגרסה 2.0?" >> README.md
+          echo "* ⭐ **המבחר שלי:** ניהול אישי ומהיר דרך קובץ \`manual_links.json\`." >> README.md
+          echo "* 🎭 **חגי ישראל:** דגש עונתי מתחלף (פורים, פסח וכו')." >> README.md
+          echo "* ☀️ **פדגוגיה בשימוש:** קטגוריות למפגש בוקר, תנועה ומוזיקת הרפיה." >> README.md
           echo "" >> README.md
           echo "## 👨‍💻 מפתח המערכת" >> README.md
           echo "[Almog787](https://github.com/Almog787)" >> README.md
           echo "" >> README.md
-          echo "*עודכן לאחרונה: $(date)*" >> README.md
+          echo "---" >> README.md
+          echo "*עודכן לאחרונה על ידי המערכת ב: $(date -u '+%d/%m/%Y %H:%M:%S') UTC*" >> README.md
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "Update README manually" || exit 0
+          git commit -m "docs: update README with latest project info" || exit 0
           git push
