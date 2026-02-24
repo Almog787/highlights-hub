@@ -13,11 +13,9 @@
       gtag('config', 'G-8NEMWLX7BF');
     </script>
 
-    <meta name="google-adsense-account" content="ca-pub-3359114283161345">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דשבורד גננות | המרכז המוזיקלי המשולב</title>
+    <title>דשבורד גננות | יום הולדת ומוזיקה</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,8 +26,7 @@
             --purim-color: #9c27b0;
             --morning-color: #ff9800;
             --movement-color: #4caf50;
-            --classics-color: #2196f3;
-            --relax-color: #607d8b;
+            --birthday-color: #e91e63; /* ורוד יום הולדת */
             --manual-color: #e67e22;
         }
         
@@ -47,16 +44,17 @@
             display: inline-flex; align-items: center; gap: 8px;
         }
 
+        /* צבעי כפתורים */
+        .btn-manual { color: var(--manual-color); border: 1px solid var(--manual-color); }
+        .btn-manual.active { background: var(--manual-color); color: white; }
         .btn-purim { color: var(--purim-color); border: 1px solid var(--purim-color); }
         .btn-purim.active { background: var(--purim-color); color: white; }
         .btn-morning { color: var(--morning-color); border: 1px solid var(--morning-color); }
         .btn-morning.active { background: var(--morning-color); color: white; }
         .btn-movement { color: var(--movement-color); border: 1px solid var(--movement-color); }
         .btn-movement.active { background: var(--movement-color); color: white; }
-        .btn-classics { color: var(--classics-color); border: 1px solid var(--classics-color); }
-        .btn-classics.active { background: var(--classics-color); color: white; }
-        .btn-manual { color: var(--manual-color); border: 1px solid var(--manual-color); }
-        .btn-manual.active { background: var(--manual-color); color: white; }
+        .btn-birthday { color: var(--birthday-color); border: 1px solid var(--birthday-color); }
+        .btn-birthday.active { background: var(--birthday-color); color: white; }
 
         .search-container { max-width: 500px; margin: 20px auto 0; padding: 0 15px; }
         .search-input {
@@ -67,31 +65,18 @@
         .stream-grid { display: none; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 0; }
         .stream-grid.active { display: grid; }
 
-        .video-card {
-            background: white; border-radius: 18px; overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 4px solid #ccc;
-        }
-
+        .video-card { background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 4px solid #ccc; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; background-color: #000; cursor: pointer; }
         .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-        
-        .play-button {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 60px; height: 60px; background-color: rgba(255, 0, 0, 0.9);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 30px; z-index: 2;
-        }
-        
         .video-title { padding: 12px; font-weight: 600; font-size: 0.9rem; height: 60px; overflow: hidden; }
 
-        footer { background: white; padding: 20px 0; margin-top: auto; border-top: 1px solid #eee; }
-        
+        footer { background: white; padding: 20px 0; margin-top: auto; border-top: 1px solid #eee; text-align: center; }
         #current-time-container { font-size: 0.9rem; line-height: 1.2; text-align: left; }
     </style>
 </head>
 <body>
 
-<header class="bg-white py-3 border-bottom" role="banner">
+<header class="bg-white py-3 border-bottom">
     <div class="container d-flex justify-content-between align-items-center">
         <h2 class="m-0 fw-800 text-primary"><i class="bi bi-music-note-beamed"></i> דשבורד גננות</h2>
         <div id="current-time-container" class="badge bg-light text-dark p-2 border">
@@ -104,14 +89,11 @@
 
 <nav class="category-bar">
     <div class="container d-flex">
-        <button class="nav-btn btn-manual active" onclick="switchCat('manual_section', this)">
-            <i class="bi bi-star-fill"></i> המבחר שלי
-        </button>
+        <button class="nav-btn btn-manual active" onclick="switchCat('manual_section', this)"><i class="bi bi-star-fill"></i> המבחר שלי</button>
+        <button class="nav-btn btn-birthday" onclick="switchCat('birthday', this)"><i class="bi bi-cake2"></i> יום הולדת</button>
         <button class="nav-btn btn-purim" onclick="switchCat('purim', this)"><i class="bi bi-mask"></i> פורים</button>
         <button class="nav-btn btn-morning" onclick="switchCat('morning_circle', this)"><i class="bi bi-sun"></i> מפגש בוקר</button>
-        <button class="nav-btn btn-movement" onclick="switchCat('movement_play', this)"><i class="bi bi-person-walking"></i> תנועה והפעלה</button>
-        <button class="nav-btn btn-classics" onclick="switchCat('israeli_classics', this)"><i class="bi bi-flag"></i> שירי ילדות</button>
-        <button class="nav-btn btn-relax" style="color:var(--relax-color); border:1px solid var(--relax-color);" onclick="switchCat('relaxation_sleep', this)"><i class="bi bi-moon-stars"></i> מנוחה</button>
+        <button class="nav-btn btn-movement" onclick="switchCat('movement_play', this)"><i class="bi bi-person-walking"></i> תנועה</button>
     </div>
 </nav>
 
@@ -119,27 +101,25 @@
     <input type="text" id="songSearch" class="search-input" placeholder="חפשי שיר..." onkeyup="filterSongs()">
 </div>
 
-<main class="container py-4" id="main-content">
+<main class="container py-4">
     <div id="manual_section" class="stream-grid active"></div>
+    <div id="birthday" class="stream-grid"></div>
     <div id="purim" class="stream-grid"></div>
     <div id="morning_circle" class="stream-grid"></div>
     <div id="movement_play" class="stream-grid"></div>
-    <div id="israeli_classics" class="stream-grid"></div>
-    <div id="relaxation_sleep" class="stream-grid"></div>
 </main>
 
 <footer>
-    <div class="container text-center">
-        <p class="m-0 text-muted">נבנה באהבה לגננות ישראל &copy; 2026</p>
-        <p style="color: #555; font-weight: 600; margin: 0;">Developed by Almog787</p>
-    </div>
+    <p class="m-0 text-muted">נבנה באהבה לגננות ישראל &copy; 2026</p>
+    <p style="color: #555; font-weight: 600; margin: 0;">Developed by Almog787</p>
 </footer>
 
 <script>
     function switchCat(id, btn) {
         document.querySelectorAll('.stream-grid').forEach(g => g.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
+        const target = document.getElementById(id);
+        if(target) target.classList.add('active');
         btn.classList.add('active');
         document.getElementById('songSearch').value = '';
         filterSongs();
@@ -149,15 +129,14 @@
         const query = document.getElementById('songSearch').value.toLowerCase();
         const activeGrid = document.querySelector('.stream-grid.active');
         if (!activeGrid) return;
-        const cards = activeGrid.querySelectorAll('.video-card');
-        cards.forEach(card => {
+        activeGrid.querySelectorAll('.video-card').forEach(card => {
             const title = card.querySelector('.video-title').innerText.toLowerCase();
             card.style.display = title.includes(query) ? "block" : "none";
         });
     }
 
     function loadVideo(container, videoUrl) {
-        container.innerHTML = `<iframe src="${videoUrl}&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        container.innerHTML = `<iframe src="${videoUrl}&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
     }
 
     function getThumb(url) {
@@ -167,34 +146,29 @@
 
     async function initDashboard() {
         try {
-            // הוספת גרסה דינמית לקבצים כדי למנוע טעינה מהמטמון הישן
             const version = Date.now();
-            const resAuto = await fetch(`streams.json?v=${version}`);
-            const dataAuto = await resAuto.json();
-            
-            let dataManual = { my_links: [] };
-            try {
-                const resManual = await fetch(`manual_links.json?v=${version}`);
-                if (resManual.ok) dataManual = await resManual.json();
-            } catch (e) {}
+            const res = await fetch(`manual_links.json?v=${version}`);
+            if (!res.ok) return;
+            const allCategories = await res.json();
 
-            const allData = { ...dataAuto, "manual_section": dataManual.my_links || [] };
-            for (const [key, items] of Object.entries(allData)) {
-                const grid = document.getElementById(key);
+            for (const [categoryKey, songs] of Object.entries(allCategories)) {
+                const grid = document.getElementById(categoryKey);
                 if (!grid) continue;
-                grid.innerHTML = items.map(item => `
+
+                grid.innerHTML = songs.map(song => `
                     <article class="video-card">
-                        <div class="video-container" onclick="loadVideo(this, '${item.url}')">
-                            <img src="${getThumb(item.url)}" alt="${item.title}" loading="lazy">
-                            <div class="play-button"><i class="bi bi-play-fill"></i></div>
+                        <div class="video-container" onclick="loadVideo(this, '${song.url}')">
+                            <img src="${getThumb(song.url)}" alt="${song.title}" loading="lazy">
+                            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:40px;"><i class="bi bi-play-circle-fill"></i></div>
                         </div>
-                        <h3 class="video-title">${item.title}</h3>
+                        <h3 class="video-title">${song.title}</h3>
                     </article>
                 `).join('');
             }
-        } catch (e) {}
+        } catch (e) { console.error("Error loading JSON", e); }
     }
 
+    // לוגיקת תאריך עברי באותיות
     function getGematria(num) {
         const letters = {1000:'תתק',900:'תתק',800:'תת',700:'תש',600:'תר',500:'תק',400:'ת',300:'ש',200:'ר',100:'ק',90:'צ',80:'פ',70:'ע',60:'ס',50:'נ',40:'מ',30:'ל',20:'כ',10:'י',9:'ט',8:'ח',7:'ז',6:'ו',5:'ה',4:'ד',3:'ג',2:'ב',1:'א'};
         let str = ''; if (num >= 5000) num -= 5000;
@@ -213,14 +187,18 @@
         const now = new Date();
         document.getElementById('clock-time').innerText = now.toLocaleTimeString('he-IL');
         document.getElementById('date-gregorian').innerText = now.toLocaleDateString('he-IL', {day:'numeric', month:'long', year:'numeric'});
-        const heParts = new Intl.DateTimeFormat('he-IL-u-ca-hebrew', {day:'numeric', month:'long', year:'numeric'}).formatToParts(now);
-        const day = parseInt(heParts.find(p=>p.type==='day').value);
-        const month = heParts.find(p=>p.type==='month').value;
-        const year = parseInt(heParts.find(p=>p.type==='year').value);
-        document.getElementById('date-hebrew').innerText = `${getGematria(day)} ב${month} ${getGematria(year)}`;
+        try {
+            const heParts = new Intl.DateTimeFormat('he-IL-u-ca-hebrew', {day:'numeric', month:'long', year:'numeric'}).formatToParts(now);
+            const day = parseInt(heParts.find(p=>p.type==='day').value);
+            const month = heParts.find(p=>p.type==='month').value;
+            const year = parseInt(heParts.find(p=>p.type==='year').value);
+            document.getElementById('date-hebrew').innerText = `${getGematria(day)} ב${month} ${getGematria(year)}`;
+        } catch(e) {}
     }
 
-    setInterval(updateDateTime, 1000); updateDateTime(); initDashboard();
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    initDashboard();
 </script>
 </body>
 </html>
