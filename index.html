@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>דשבורד גננות | המרכז המוזיקלי המאוחד</title>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NEMWLX7BF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8NEMWLX7BF');
-    </script>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -21,60 +13,53 @@
     <style>
         :root {
             --bg-color: #f4f7f6;
-            --primary-accent: #d63031;
-            --card-radius: 22px;
+            --card-radius: 20px;
         }
         
         body { background-color: var(--bg-color); font-family: 'Assistant', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
         header { background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.03); padding: 1rem 0; }
-        .dashboard-title { font-weight: 800; color: #2c3e50; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
-        .dashboard-title i { color: var(--primary-accent); }
+        .dashboard-title { font-weight: 800; color: #2c3e50; font-size: 1.5rem; display: flex; align-items: center; gap: 8px; }
+        .dashboard-title i { color: #e74c3c; }
         
-        /* כפתור תפילות מעוצב */
         .btn-prayers {
-            background: #fff5f5; color: var(--primary-accent); border: 2px solid #fab1a0;
-            padding: 8px 22px; border-radius: 50px; font-weight: 800; transition: 0.3s;
-            display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(214, 48, 49, 0.1);
+            background: #fff5f5; color: #d63031; border: 1.5px solid #fab1a0;
+            padding: 8px 20px; border-radius: 50px; font-weight: 700; transition: 0.3s;
+            display: flex; align-items: center; gap: 8px;
         }
-        .btn-prayers:hover { background: var(--primary-accent); color: white; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(214, 48, 49, 0.2); }
+        .btn-prayers:hover { background: #d63031; color: white; transform: translateY(-2px); }
 
-        .time-badge { background: #f8f9fa; border-radius: 15px; padding: 8px 18px; border: 1px solid #eef2f5; text-align: center; min-width: 180px; }
+        .time-badge { background: #f8f9fa; border-radius: 12px; padding: 10px 15px; border: 1px solid #eef2f5; text-align: center; min-width: 180px; }
         #clock-time { color: #2c3e50; font-weight: 800; font-size: 1.3rem; line-height: 1.2; }
         .date-text { color: #7f8c8d; font-size: 0.85rem; font-weight: 600; }
 
         .category-bar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.04); overflow-x: auto; white-space: nowrap; }
-        .nav-btn { border: none; background: #f1f3f5; color: #555; padding: 10px 24px; margin: 0 6px; border-radius: 50px; font-weight: 700; transition: 0.3s; cursor: pointer; }
+        .nav-btn { border: none; background: #f1f3f5; color: #555; padding: 10px 22px; margin: 0 6px; border-radius: 50px; font-weight: 700; transition: 0.3s; cursor: pointer; }
         .nav-btn.active { background: #2c3e50; color: white; transform: scale(1.05); }
         
         .search-container { max-width: 600px; margin: 25px auto 10px; padding: 0 15px; }
-        .search-input { border-radius: 50px; padding: 14px 25px; border: 2px solid #e9ecef; width: 100%; text-align: right; outline: none; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        .search-input:focus { border-color: #3498db; background: white; }
+        .search-input { border-radius: 50px; padding: 12px 20px; border: 2px solid #e9ecef; width: 100%; text-align: right; outline: none; }
 
         .stream-grid { display: none; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 20px 0; }
         .stream-grid.active { display: grid; }
         
-        .video-card { background: white; border-radius: var(--card-radius); overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); }
-        .video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .video-card { background: white; border-radius: var(--card-radius); overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.04); transition: 0.3s; display: flex; flex-direction: column; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; background-color: #000; cursor: pointer; }
         .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .glass-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(8px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; }
-        .video-title { padding: 15px 15px 10px; font-weight: 700; text-align: right; margin: 0; color: #2c3e50; font-size: 1.05rem; }
-        .lesson-hint { padding: 0 15px 15px; font-size: 0.9rem; color: #7f8c8d; line-height: 1.4; }
+        .glass-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(5px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; }
+        .video-title { padding: 15px; font-weight: 700; text-align: right; margin: 0; }
+        
+        .prayer-section { border-bottom: 2px solid #f8f9fa; padding-bottom: 20px; margin-bottom: 20px; }
+        .prayer-title { color: #d63031; font-weight: 800; margin-bottom: 12px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px; justify-content: center; }
+        .prayer-text { font-size: 1.2rem; line-height: 1.8; color: #2d3436; font-weight: 600; text-align: center; white-space: pre-line; }
 
-        /* מודאל תפילות */
-        .prayer-section { border-bottom: 2px dashed #eee; padding-bottom: 25px; margin-bottom: 25px; }
-        .prayer-section:last-child { border-bottom: none; }
-        .prayer-title { color: var(--primary-accent); font-weight: 800; margin-bottom: 15px; font-size: 1.4rem; text-align: center; }
-        .prayer-text { font-size: 1.25rem; line-height: 1.8; color: #2d3436; font-weight: 600; text-align: center; white-space: pre-line; }
-
-        footer { background: white; padding: 30px 0; margin-top: auto; text-align: center; border-top: 1px solid #eee; }
+        footer { background: white; padding: 25px 0; margin-top: auto; text-align: center; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-        <div class="d-flex align-items-center gap-4">
+        <div class="d-flex align-items-center gap-3">
             <h1 class="dashboard-title m-0"><i class="bi bi-music-note-beamed"></i> המרכז המוזיקלי</h1>
             <button class="btn-prayers" data-bs-toggle="modal" data-bs-target="#prayersModal">
                 <i class="bi bi-heart-fill"></i> תפילות
@@ -90,13 +75,13 @@
 
 <div class="modal fade" id="prayersModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content" style="border-radius: 35px; border: none; overflow: hidden;">
-      <div class="modal-header" style="background: #fffafa; border: none; padding: 25px 35px;">
-        <h5 class="modal-title fw-800" style="color: #2c3e50;">רגע של הודיה ותפילה</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content" style="border-radius: 30px; border: none; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+      <div class="modal-header" style="border: none; padding: 25px 35px 10px;">
+        <h5 class="modal-title fw-800">רגע של כוונה</h5>
+        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div id="prayers-container" class="modal-body" style="padding: 30px 40px;">
-        <div class="text-center py-5"><div class="spinner-border text-danger" role="status"></div><br><br>טוען תפילות...</div>
+      <div id="prayers-container" class="modal-body" style="padding: 20px 35px 40px;">
+        <div class="text-center py-4">טוען תפילות...</div>
       </div>
     </div>
   </div>
@@ -104,19 +89,19 @@
 
 <nav class="category-bar">
     <div class="container d-flex">
-        <button class="nav-btn active" onclick="switchCat('manual_section', this)">🏠 המבחר שלי</button>
-        <button class="nav-btn" onclick="switchCat('birthday', this)">🎂 יום הולדת</button>
-        <button class="nav-btn" onclick="switchCat('purim', this)">🎭 פורים</button>
-        <button class="nav-btn" onclick="switchCat('morning_circle', this)">☀️ מפגש בוקר</button>
-        <button class="nav-btn" onclick="switchCat('movement_play', this)">🏃 תנועה</button>
-        <button class="nav-btn" onclick="switchCat('israeli_classics', this)">🇮🇱 קלאסיקות</button>
-        <button class="nav-btn" onclick="switchCat('relaxation_sleep', this)">🌙 מנוחה</button>
-        <button class="nav-btn" onclick="switchCat('story_time', this)">📖 שעת סיפור</button>
+        <button class="nav-btn active" onclick="switchCat('manual_section', this)">המבחר שלי</button>
+        <button class="nav-btn" onclick="switchCat('birthday', this)">יום הולדת</button>
+        <button class="nav-btn" onclick="switchCat('purim', this)">פורים</button>
+        <button class="nav-btn" onclick="switchCat('morning_circle', this)">מפגש בוקר</button>
+        <button class="nav-btn" onclick="switchCat('movement_play', this)">תנועה</button>
+        <button class="nav-btn" onclick="switchCat('israeli_classics', this)">קלאסיקות</button>
+        <button class="nav-btn" onclick="switchCat('relaxation_sleep', this)">מנוחה</button>
+        <button class="nav-btn" onclick="switchCat('story_time', this)">שעת סיפור</button>
     </div>
 </nav>
 
 <div class="search-container">
-    <input type="text" id="songSearch" class="search-input" placeholder="חיפוש מהיר של שיר או הפעלה..." onkeyup="filterSongs()">
+    <input type="text" id="songSearch" class="search-input" placeholder="חפשי שיר או הפעלה..." onkeyup="filterSongs()">
 </div>
 
 <main class="container py-4 flex-grow-1">
@@ -131,14 +116,12 @@
 </main>
 
 <footer>
-    <div class="container">
-        <p class="m-0 text-muted fw-bold">נבנה באהבה לגננות ישראל &copy; 2026 | Almog787</p>
-    </div>
+    <p class="m-0 text-muted fw-bold">נבנה באהבה לגננות ישראל &copy; 2026</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // --- תאריך ושעה עברית/לועזית ---
+    // --- תאריך ושעה ---
     function getGematria(num) {
         const letters = {400:'ת',300:'ש',200:'ר',100:'ק',90:'צ',80:'פ',70:'ע',60:'ס',50:'נ',40:'מ',30:'ל',20:'כ',10:'י',9:'ט',8:'ח',7:'ז',6:'ו',5:'ה',4:'ד',3:'ג',2:'ב',1:'א'};
         let str = '', n = num % 5000;
@@ -174,34 +157,31 @@
             
             container.innerHTML = Object.values(data).map(prayer => `
                 <div class="prayer-section">
-                    <div class="prayer-title"><i class="bi bi-stars"></i> ${prayer.title}</div>
+                    <div class="prayer-title">${prayer.title}</div>
                     <div class="prayer-text">${prayer.content}</div>
                 </div>
             `).join('');
         } catch (e) {
-            document.getElementById('prayers-container').innerHTML = "<p class='text-center'>לא ניתן היה לטעון את התפילות. וודאו שקובץ prayers.json קיים.</p>";
+            document.getElementById('prayers-container').innerHTML = "שגיאה בטעינת התפילות.";
         }
     }
 
-    // --- ניהול קטגוריות וחיפוש ---
+    // --- ניהול שירים ---
     function switchCat(id, btn) {
         document.querySelectorAll('.stream-grid').forEach(g => g.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         btn.classList.add('active');
-        gtag('event', 'select_content', { content_type: 'category', item_id: id });
     }
 
     function filterSongs() {
         const query = document.getElementById('songSearch').value.toLowerCase();
         const activeGrid = document.querySelector('.stream-grid.active');
         activeGrid.querySelectorAll('.video-card').forEach(card => {
-            const text = card.innerText.toLowerCase();
-            card.style.display = text.includes(query) ? "flex" : "none";
+            card.style.display = card.innerText.toLowerCase().includes(query) ? "flex" : "none";
         });
     }
 
-    // --- יוטיוב וטעינת נתונים ---
     function getYouTubeID(url) {
         const match = url?.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
         return (match && match[2].length === 11) ? match[2] : '';
@@ -210,8 +190,7 @@
     function loadVideo(container, url, title) {
         const id = getYouTubeID(url);
         if(id) {
-            container.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:22px 22px 0 0;"></iframe>`;
-            gtag('event', 'play_video', { video_title: title });
+            container.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:20px 20px 0 0;"></iframe>`;
         }
     }
 
@@ -222,28 +201,25 @@
                 fetch(`manual_links.json?v=${Date.now()}`).then(r => r.json()).catch(() => ({}))
             ]);
             
-            const categories = ['manual_section', 'birthday', 'purim', 'morning_circle', 'movement_play', 'israeli_classics', 'relaxation_sleep', 'story_time'];
-            
-            categories.forEach(key => {
+            const allKeys = ['manual_section', 'birthday', 'purim', 'morning_circle', 'movement_play', 'israeli_classics', 'relaxation_sleep', 'story_time'];
+            allKeys.forEach(key => {
                 const grid = document.getElementById(key);
                 if (!grid) return;
                 const songs = [...(resManual[key] || []), ...(resAuto[key] || [])];
-                
                 grid.innerHTML = songs.map(song => `
                     <article class="video-card">
-                        <div class="video-container" onclick="loadVideo(this, '${song.url || song.id}', '${song.title.replace(/'/g, "")}')">
-                            <img src="https://img.youtube.com/vi/${getYouTubeID(song.url || song.id)}/hqdefault.jpg" loading="lazy">
+                        <div class="video-container" onclick="loadVideo(this, '${song.url || song.id}', '${song.title}')">
+                            <img src="https://img.youtube.com/vi/${getYouTubeID(song.url || song.id)}/hqdefault.jpg">
                             <div class="glass-play-btn"><i class="bi bi-play-fill"></i></div>
                         </div>
                         <h3 class="video-title">${song.title}</h3>
-                        ${song.lesson_plan ? `<div class="lesson-hint">💡 ${song.lesson_plan}</div>` : ''}
+                        ${song.lesson_plan ? `<div style="padding:0 15px 15px; font-size:0.9rem; color:#666;">💡 ${song.lesson_plan}</div>` : ''}
                     </article>
                 `).join('');
             });
-        } catch (e) { console.error("Data load error:", e); }
+        } catch (e) {}
     }
 
-    // הפעלה
     setInterval(updateDateTime, 1000);
     updateDateTime();
     loadPrayers();
