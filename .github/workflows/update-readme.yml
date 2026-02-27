@@ -1,42 +1,47 @@
 name: Update Dashboard README
 
 on:
-  workflow_dispatch: # הפעלה ידנית בלבד
+  workflow_dispatch: # הפעלה ידנית בלבד מה-Actions tab
+  push:
+    paths:
+      - 'manual_links.json' # מעדכן את ה-README בכל פעם שיש שינוי בתוכן
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # הרשאה חיונית לכתיבת הקובץ בחזרה ל-GitHub
+      contents: write
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4 # גרסה מעודכנת
+        uses: actions/checkout@v4
 
       - name: Generate README File
         run: |
-          echo "# 🎵 דשבורד הגננת המקצועי | המרכז המוזיקלי" > README.md
+          echo "# 🎵 דשבורד הגננת המקצועי | Highlights Hub" > README.md
           echo "" >> README.md
           echo "[![Site Status](https://img.shields.io/website?url=https%3A%2F%2Falmog787.github.io%2Fhighlights-hub%2F&logo=googlechrome&logoColor=white)](https://almog787.github.io/highlights-hub/)" >> README.md
           echo "![GitHub last commit](https://img.shields.io/github/last-commit/Almog787/highlights-hub?color=blue)" >> README.md
           echo "" >> README.md
-          echo "## 🌍 Project About" >> README.md
-          echo "A high-performance, automated media hub tailored for early childhood educators (ages 0-4). Built with a focus on speed, simplicity, and pedagogical flow." >> README.md
+          echo "## 🌍 אודות הפרויקט" >> README.md
+          echo "מרכז מדיה דיגיטלי מתקדם המותאם אישית לגני ילדים (גילאי 0-4). המערכת נבנתה במטרה לספק גישה מהירה, נקייה ופדגוגית לתכנים מוזיקליים וסרטוני הפעלה ללא פרסומות מסיחות דעת." >> README.md
           echo "" >> README.md
-          echo "### 🚀 Key Features" >> README.md
-          echo "* **Smart Automation:** Python-based scraper updates seasonal content every 6 hours." >> README.md
-          echo "* **Smart Lazy Loading:** Instant load times by using Thumbnail-to-Player rendering." >> README.md
-          echo "* **Dual-Source Integration:** Combines automated discovery with manual curation." >> README.md
-          echo "* **Zero-Backend:** Purely static architecture hosted on GitHub Pages." >> README.md
+          echo "### 🚀 יכולות מרכזיות" >> README.md
+          echo "* **ניהול דו-ערוצי:** שילוב בין תוכן אוטומטי (Python Scraper) לבין בחירה ידנית של הגננת." >> README.md
+          echo "* **מערכי שיעור מובנים:** לכל שיר ניתן להצמיד הנחיות פעילות ותנועה." >> README.md
+          echo "* **ביצועים גבוהים:** שימוש ב-Lazy Loading לטעינה מהירה במיוחד של נגני וידאו." >> README.md
+          echo "* **ממשק אדמין:** דף ניהול מאובטח לעדכון תכנים בזמן אמת ללא צורך בידע טכני." >> README.md
           echo "" >> README.md
-          echo "## 🔗 כניסה מהירה" >> README.md
-          echo "### 👉 **[לחצי כאן לכניסה לדשבורד המוזיקלי](https://almog787.github.io/highlights-hub/)**" >> README.md
+          echo "## 🔗 קישורים מהירים" >> README.md
+          echo "| דף המערכת | ממשק ניהול (Admin) |" >> README.md
+          echo "| :--- | :--- |" >> README.md
+          echo "| [👉 כניסה לדשבורד הגננת](https://almog787.github.io/highlights-hub/) | [⚙️ ניהול תכנים ומערכי שיעור](https://almog787.github.io/highlights-hub/admin.html) |" >> README.md
           echo "" >> README.md
           echo "---" >> README.md
-          echo "## 🌟 מה חדש בגרסה 2.0?" >> README.md
-          echo "* ⭐ **המבחר שלי:** ניהול אישי ומהיר דרך קובץ \`manual_links.json\`." >> README.md
-          echo "* 🎭 **חגי ישראל:** דגש עונתי מתחלף (פורים, פסח וכו')." >> README.md
-          echo "* ☀️ **פדגוגיה בשימוש:** קטגוריות למפגש בוקר, תנועה ומוזיקת הרפיה." >> README.md
+          echo "## 🌟 מה חדש בגרסה 2.5?" >> README.md
+          echo "* 🔐 **אבטחת אדמין:** ממשק הניהול מוגן בסיסמה אישית." >> README.md
+          echo "* ☁️ **GitHub Actions Integration:** עדכון הקבצים מתבצע בצורה מאובטחת דרך שרתי GitHub." >> README.md
+          echo "* 📝 **עריכה ויזואלית:** הוספה ומחיקה של שירים ישירות מהדפדפן." >> README.md
           echo "" >> README.md
           echo "## 👨‍💻 מפתח המערכת" >> README.md
           echo "[Almog787](https://github.com/Almog787)" >> README.md
@@ -49,5 +54,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "docs: update README with latest project info" || exit 0
+          git commit -m "docs: update README with current links and project info" || exit 0
           git push
